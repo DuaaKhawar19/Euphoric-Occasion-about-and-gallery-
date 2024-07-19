@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    
+    <title>Euphoric Occasions</title>
+    <style>
+                /*navbar*/
+
+
+.nn {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color:white;
+    margin: 0 12px 0 12px;
+    
+}
+
+
+.left{
+    display: inline-block;
+    position: absolute;
+    left: 34px;
+    top: 5px;
+    padding-top: 3px;
+    padding-left: 5px;
+    width:120px;
+    height: 40px;
+    animation: leftSideAni 2s ease forwards;
+
+}
+
+
+.mid{
+    display: block;
+    width: 50%;
+    margin: 12px auto;
+    animation: navani 2s ease forwards;
+    animation-delay: calc(.15s * var(--navAni));  
+}
+
+
+.right{
+    animation: navani 2s ease forwards;
+    animation-delay: calc(.15s * var(--navAni));
+    display: inline-block;
+    position: absolute;
+    right: 34px;
+    top:3px;
+    
+}
+
+.navbarr{
+    display: inline-block;
+}
+
+.navbarr li{
+    display: inline-block;
+    font-size: 20px;
+}
+
+.navbarr li a{
+    text-decoration: none;
+    padding: 34px 23px;
+
+}
+
+.black-color{
+    color: black;
+}
+
+.navbarr li a:hover, .active{
+    text-decoration: underline;
+    color: #ff44cb;
+}
+
+.btn-menu{
+    display: none;
+}
+
+/* login signup butons */
+
+.black-btn{
+    color: white;
+    background: black;
+    border: none;
+    width: 90px;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.black-btn:hover{
+    background: rgb(65, 64, 64);
+}
+
+.purple-btn{
+    margin-left: 5px;
+    color: white;
+    background: #ff44cb;
+    border: none;
+    width: 90px;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.purple-btn:hover{
+    background:  #ca37a0;
+}
+/* Gallery */
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .gallery-container {
+            padding: 30px 0;
+            margin-top: 500px;
+            margin-bottom: 500px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .gallery-item img {
+            width: 100%;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-item .overlay {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+        }
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        .zoom-in {
+            animation: zoomIn 0.5s ease;
+        }
+        .move-up-down {
+            animation: moveUpDown 2s infinite alternate ease;
+        }
+        @keyframes zoomIn {
+            0% {
+                transform: scale(0.9);
+                opacity: 0;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+        @keyframes moveUpDown {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-10px);
+            }
+        }
+        @media (max-width: 768px) {
+            .gallery-item {
+                margin-bottom: 20px;
+            }
+        }
+       h1 {
+        text-align: center;
+        font-family: cursive;
+        margin: 30px;
+       }
+       p{
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-bottom: 30px;
+        font-family: 'Times New Roman', Times, serif;
+       }
+       hr{
+        margin-bottom: 40px
+       }
+       .mainpara {
+        text-align: center;
+        margin-left: 20px;
+        margin-right: 20px;
+margin-bottom: 10px;
+        font-family: 'Times New Roman', Times, serif;
+       }
+
+    
+       
+    </style>
+</head>
+<body>
+<!-- navbar -->
+
+<div class="nn" id="ndiv">
+    <header class="header mogra">
+
+        <!--logo-->
+        <div class="left">
+            <a href="/index.html" target="_blank" style="text-decoration: none;"><img src="/imgs/logo2.png" alt="" style="height: 42px; width: 65px;"></a>
+        </div>
+
+        <!--navbar-->
+        <div class="mid">
+            <ul class="navbarr" id="navbarr">
+                <li><a href="/index.html" target="_blank" class="black-color">Home</a></li>
+
+                
+                <li><a href="/gallery.html" target="_blank" class="active" style="text-decoration: underline;">Gallery</a></li>
+                <li><a href="/about.html" target="_blank" class="black-color">About</a></li>
+                <li><a href="/contact.html" target="_blank" class="black-color">Contact</a></li>
+                
+            </ul>
+            <div class="btn-menu" onclick="toggleNavbar()">
+                &#9776;
+            </div>
+        </div>
+
+        <div class="right">
+            <button class="black-btn">Log in</button>
+            <button class="purple-btn">Sign up</button>
+        </div>
+
+    </header>
+    <hr>
+</div>
+
+    <!-- gallery -->
+    <h1>Our Gallery</h1>
+    <p class="mainpara">
+        
+        Welcome to the gallery of Euphoric Occasions, where we showcase the magic and beauty of the weddings we've had the honor of planning. </p>
+        <p>Each image tells a story of love, joy, and unforgettable moments that our team has meticulously crafted.
+        
+        Browse through our collection to see the enchanting venues, exquisite decorations, and heartfelt celebrations that define our work. Let these images inspire you and give you a glimpse into the possibilities that await your special day.
+        
+        At Euphoric Occasions, we believe that every wedding should be as unique as the love it celebrates. We are dedicated to making your dream wedding a reality, filled with moments that will be cherished forever.
+
+        Feel free to customize this text to better fit your style and the specific content of your gallery.</p>
+        <hr>
+        <!-- Gallery containers -->
+    <div class="container gallery-container">
+        <div class="row">
+            <!-- Gallery Item 1 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 1" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 1</div>
+                </div>
+            </div>
+            <!-- Gallery Item 2 -->
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 2" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 2</div>
+                </div>
+            </div>
+           
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 3" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 3</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 4" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 4</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 5" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 5</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 6" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 6</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 7" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 7</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 8" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 8</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 9" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 9</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 10" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 10</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 11" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 11</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 12" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 12</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 13" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 13</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 14" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 14</div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 gallery-item zoom-in">
+                <img src="https://via.placeholder.com/600x400" alt="Gallery Image 15" class="img-fluid move-up-down">
+                <div class="overlay">
+                    <div class="text">Wedding Moment 15</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+<section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: black">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3">Register for free</span>
+            <button class="purple-btn">Sign up</button>
+            </button>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <span style="margin:10px"> Email: euphoric_occasion@gmail.com </span>
+        <span style="margin:10px"> Contact: 773-702-1000 </span>
+        <span style="margin:10px"> Address: newyork, USA </span>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
+
+<script>
+    
+    /*toggle navbar*/
+    function toggleNavbar() {
+        var navbar = document.getElementById('navbarr');
+        navbar.classList.toggle('active');
+    }
+
+    // animate when scroll
+
+    // fadein
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const sections = document.querySelectorAll('.animated-section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__fadeIn');
+                } else {
+                    entry.target.classList.remove('animate__fadeIn');
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+
+
+    // movingup
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const sections = document.querySelectorAll('.animated-section2');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('movingup');
+                } else {
+                    entry.target.classList.remove('movingup');
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

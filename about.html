@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Euphoric Occasions</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        /*navbar*/
+
+
+.nn {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color:white;
+    margin: 0 12px 0 12px;
+    
+}
+
+
+.left{
+    display: inline-block;
+    position: absolute;
+    left: 34px;
+    top: 5px;
+    padding-top: 3px;
+    padding-left: 5px;
+    width:120px;
+    height: 40px;
+    animation: leftSideAni 2s ease forwards;
+
+}
+
+
+.mid{
+    display: block;
+    width: 50%;
+    margin: 12px auto;
+    animation: navani 2s ease forwards;
+    animation-delay: calc(.15s * var(--navAni));  
+}
+
+
+.right{
+    animation: navani 2s ease forwards;
+    animation-delay: calc(.15s * var(--navAni));
+    display: inline-block;
+    position: absolute;
+    right: 34px;
+    top:3px;
+    
+}
+
+.navbarr{
+    display: inline-block;
+}
+
+.navbarr li{
+    display: inline-block;
+    font-size: 20px;
+}
+
+.navbarr li a{
+    text-decoration: none;
+    padding: 34px 23px;
+
+}
+
+.black-color{
+    color: black;
+}
+
+.navbarr li a:hover, .active{
+    text-decoration: underline;
+    color: #ff44cb;
+}
+
+.btn-menu{
+    display: none;
+}
+
+/* login signup butons */
+
+.black-btn{
+    color: white;
+    background: black;
+    border: none;
+    width: 90px;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.black-btn:hover{
+    background: rgb(65, 64, 64);
+}
+
+.purple-btn{
+    margin-left: 5px;
+    color: white;
+    background: #ff44cb;
+    border: none;
+    width: 90px;
+    padding: 8px;
+    border-radius: 30px;
+}
+
+.purple-btn:hover{
+    background:  #ca37a0;
+}
+
+/* about  */
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        .about-container {
+            padding: 50px 0;
+        }
+        .about-header {
+            color: #ff1493;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .about-content {
+            font-size: 1.2em;
+            line-height: 1.6em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .team-member {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .team-member img {
+            border-radius: 50%;
+            margin-bottom: 20px;
+            transition: transform 0.5s ease;
+        }
+        .team-member:hover img {
+            transform: scale(1.1);
+        }
+        .team-member h5 {
+            color: #ff1493;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+        }
+        .team-member p {
+            font-size: 1.1em;
+        }
+        .events {
+            margin-top: 50px;
+        }
+        .event {
+            border: 1px solid #ff1493;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          
+        }
+        .event h4 {
+            color: #ff1493;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+        .event p {
+            font-size: 1.1em;
+            line-height: 1.4em;
+        }
+        .reviews, .goals {
+            margin-top: 50px;
+        }
+        .review-card {
+            border: 1px solid #ff1493;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .review-card h4 {
+            color: #ff1493;
+            margin-bottom: 10px;
+        }
+        .review-card p {
+            font-size: 1.1em;
+        }
+        .goal-card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .goal-card h4 {
+            color: #ff1493;
+            margin-bottom: 15px;
+        }
+        .goal-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .goal-card ul li {
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .fadeInUp {
+            animation: fadeInUp 1s ease;
+        }
+        .fadeInLeft {
+            animation: fadeInLeft 1s ease;
+        }
+    </style>
+</head>
+<body>
+    
+  <!-- navbar -->
+
+  <div class="nn" id="ndiv">
+    <header class="header mogra">
+
+        <!--logo-->
+        <div class="left">
+            <a href="/index.html" target="_blank" style="text-decoration: none;"><img src="/imgs/logo2.png" alt="" style="height: 42px; width: 65px;"></a>
+        </div>
+
+        <!--navbar-->
+        <div class="mid">
+            <ul class="navbarr" id="navbarr">
+                <li><a href="/index.html" target="_blank" class="black-color">Home</a></li>
+
+                
+                <li><a href="/gallery.html" target="_blank" class="black-color">Gallery</a></li>
+                <li><a href="/about.html" target="_blank" class="active" style="text-decoration: underline;">About</a></li>
+                <li><a href="/contact.html" target="_blank" class="black-color">Contact</a></li>
+                
+            </ul>
+            <div class="btn-menu" onclick="toggleNavbar()">
+                &#9776;
+            </div>
+        </div>
+
+        <div class="right">
+            <button class="black-btn">Log in</button>
+            <button class="purple-btn">Sign up</button>
+        </div>
+
+    </header>
+    <hr>
+</div>
+
+    <!-- About  -->
+    <div class="container about-container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="about-header animate__animated animate__fadeInDown">Welcome to Euphoric Occasions</h1>
+                <p class="about-content animate__animated animate__fadeInUp">
+                    At Euphoric Occasions, we turn your wedding dreams into a stunning reality. Our team is passionate about creating extraordinary celebrations that reflect the essence of your love story. With a keen eye for detail and a flair for creativity, we craft unique and personalized weddings that will leave a lasting impression on you and your guests.
+                </p>
+                <p class="about-content animate__animated animate__fadeInUp">
+                    From intimate ceremonies to grand receptions, we handle every aspect of wedding planning with dedication and enthusiasm. Our mission is to ensure that your special day is as magical and memorable as you envision it, filled with moments that you'll treasure forever.
+                </p>
+            </div>
+        </div>
+        <!-- owners  -->
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 team-member fadeInLeft">
+                <img src="/0-2.png" alt="Team Member 1" class="img-fluid">
+                <h5>Simra Nadir</h5>
+                <p>Lead Wedding Planner - Simra brings years of experience and an unmatched passion for creating dream weddings. Her eye for detail and innovative approach make her an invaluable part of our team.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 team-member fadeInUp">
+                <img src="/o-1.jpg" alt="Team Member 2" class="img-fluid">
+                <h5>Duaa Khawar</h5>
+                <p>Creative Director - Duaa's creativity and design expertise ensure that every wedding is a visual masterpiece. Her ability to blend trends with timeless elegance sets the perfect tone for your celebration.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 team-member fadeInRight">
+                <img src="/0-3.png" alt="Team Member 3" class="img-fluid">
+                <h5>Fahmida Aziz</h5>
+                <p>Event Coordinator - Fahmida's organizational skills and dedication guarantee a smooth and seamless event. Her knack for logistics and problem-solving makes her a key player in delivering flawless weddings.</p>
+            </div>
+        </div>
+        <!-- Event boxes  -->
+        <div class="row events">
+            <div class="col-lg-4 col-md-6 col-sm-12 event fadeInUp">
+                <h4>Enchanted Evening Gala</h4>
+                <p>Join us for an evening of enchantment and elegance as we showcase our latest wedding trends and inspirations. Experience the magic of a Euphoric Occasions event with a night of style, sophistication, and romance.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 event fadeInUp">
+                <h4>Wedding Showcase Extravaganza</h4>
+                <p>Discover the art of wedding planning at our exclusive showcase extravaganza. Meet our team, explore our portfolio, and get inspired by our curated selection of wedding themes and designs.</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 event fadeInUp">
+                <h4>Bridal Brunch & Workshop</h4>
+                <p>Join us for a delightful bridal brunch followed by an interactive workshop. Gain insights into the latest wedding trends, enjoy delicious refreshments, and get expert tips on making your wedding day truly special.</p>
+            </div>
+        </div>
+        <div class="row reviews">
+            <div class="col-lg-4 col-md-6 col-sm-12 review-card fadeInLeft">
+                <h4>“Absolutely Perfect!”</h4>
+                <p>“Euphoric Occasions made our wedding day truly magical. From the initial planning to the final execution, their attention to detail and creative ideas exceeded our expectations. We couldn't have asked for a better experience!” - Sarah & James</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 review-card fadeInUp">
+                <h4>“A Dream Come True”</h4>
+                <p>“Working with Euphoric Occasions was a dream come true. Their professionalism and dedication ensured that every detail was perfect. Our guests are still raving about the beautiful and unique celebration!” - Emily & Mark</p>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 review-card fadeInRight">
+                <h4>“Beyond Our Expectations”</h4>
+                <p>“The team at Euphoric Occasions went above and beyond to make our wedding day special. Their creativity and personal touch made our day unforgettable. We highly recommend them to anyone looking for a truly exceptional wedding planner!” - Rachel & Dan</p>
+            </div>
+        </div>
+        <!-- goals  -->
+        <div class="row goals">
+            <div class="col-12 goal-card fadeInUp">
+                <h4>Our Goals</h4>
+                <ul>
+                    <li>Create personalized and unforgettable wedding experiences that reflect each couple’s unique love story.</li>
+                    <li>Deliver exceptional service with a focus on attention to detail, creativity, and professionalism.</li>
+                    <li>Stay ahead of the latest wedding trends and continuously innovate to offer fresh and exciting ideas.</li>
+                    <li>Build lasting relationships with our clients through trust, transparency, and excellence.</li>
+                    <li>Ensure every event is executed flawlessly, leaving our clients and their guests with cherished memories.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!-- footer -->
+<section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: black">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3">Register for free</span>
+            <button class="purple-btn">Sign up</button>
+            </button>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+  
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <span style="margin:10px"> Email: euphoric_occasion@gmail.com </span>
+        <span style="margin:10px"> Contact: 773-702-1000 </span>
+        <span style="margin:10px"> Address: newyork, USA </span>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
+
+<script>
+    
+    /*toggle navbar*/
+    function toggleNavbar() {
+        var navbar = document.getElementById('navbarr');
+        navbar.classList.toggle('active');
+    }
+
+    // animate when scroll
+
+    // fadein
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const sections = document.querySelectorAll('.animated-section');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate__fadeIn');
+                } else {
+                    entry.target.classList.remove('animate__fadeIn');
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+
+
+    // movingup
+    document.addEventListener('DOMContentLoaded', (event) => {
+        const sections = document.querySelectorAll('.animated-section2');
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('movingup');
+                } else {
+                    entry.target.classList.remove('movingup');
+                }
+            });
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+</script>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
